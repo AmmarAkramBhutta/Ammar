@@ -14,20 +14,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 11vw;
   }
 
-  .sticky {
-    position: sticky;
-    padding: 10px 0px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: solid 1px transparent;
-    border-right: 0px;
-    border-left: 0px;
-    background-clip: padding-box;
-    box-shadow: 0 -200px 0 rgba(46, 54, 68, 0.03);
-    opacity: 1;
-    transition: position 2s;
-  }
-
   button {
     font-weight: normal;
     font-size: 17px;

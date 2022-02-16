@@ -29,6 +29,7 @@ const AboutSection = () => {
 
 export const About = styled.div`
   min-height: 90vh;
+  padding-top: 80px;
   display: flex;
   align-items: center;
   justify-content: flex-start;

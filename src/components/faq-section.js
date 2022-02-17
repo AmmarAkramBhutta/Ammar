@@ -8,7 +8,7 @@ const FaqSection = () => {
         <h2>
           Any <span className="purpled">Questions</span>.
         </h2>
-        <h3>Frequently Asked Questions</h3>
+        <span className="highlite">Frequently Asked Questions</span>
         <div className="question">
           <h4>How do I Start?</h4>
           <div className="answer">

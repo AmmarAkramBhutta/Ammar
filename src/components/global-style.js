@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
-  *{
+
+  *, *::before, *::after {
     margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -51,7 +52,26 @@ const GlobalStyle = createGlobalStyle`
     color: #9B51E0;
   }
 
-  
+  .highlite{
+  position: relative;
+  padding: 7px 0.03125em;
+  white-space: nowrap;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.highlite::after {
+  content: "";
+  position: absolute;
+  inset: 0.328125em -0.125em 0.109375em;
+  background: rgb(255, 199, 0);
+  border-radius: 0.03125em;
+  z-index: -1;
+}
+
 
 `;
 

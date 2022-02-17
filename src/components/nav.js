@@ -8,7 +8,6 @@ const Nav = () => {
 
   window.addEventListener("scroll", function () {
     setSticky(window.scrollY > 3)
-    console.log(isSticky);
   });
 
   return (

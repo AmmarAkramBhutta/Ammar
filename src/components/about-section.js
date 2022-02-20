@@ -1,38 +1,48 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
+import { photoAnimation, titleAnimation } from "../animation";
 import home1 from "../img/main-image.png";
+import Wave from "./wave";
 
 const AboutSection = () => {
   return (
     <>
       <About>
-        <div className="description">
+        <Wave />
+        <div>
           <div className="title">
-            <div className="hide">
-              <h1>Ammar Akram</h1>
+            <div>
+              <motion.h1 variants={titleAnimation}>Ammar Akram</motion.h1>
             </div>
-            <div className="hide">
+            <motion.div variants={titleAnimation}>
               <span className="full-stack">Full Stack Developer</span>
-            </div>
+            </motion.div>
           </div>
-          <p>
+          <motion.p variants={titleAnimation}>
             I design and build websites for businesses around the globe. If you
             need a modern and powerful website, send me an email.
-          </p>
+          </motion.p>
         </div>
         <div className="image">
-          <img src={home1} alt="Ammar Akram" className="main-image" />
+          <motion.img
+            variants={photoAnimation}
+            src={home1}
+            alt="Ammar Akram"
+            className="main-image"
+          />
         </div>
       </About>
     </>
   );
 };
 
-export const About = styled.div`
+export const About = styled(motion.div)`
   min-height: 90vh;
-  padding-top: 80px;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  z-index: 2;
 
   h1 {
     padding-bottom: 5px;

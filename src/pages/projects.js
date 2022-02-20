@@ -1,39 +1,94 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
+import {
+  fade,
+  pageAnimation,
+  photoAnimation,
+  lineAnimation,
+  slider,
+  sliderContainer,
+} from "../animation";
+import Project from "../components/project";
+import ScrollTop from "../components/ScrollTop";
+import projectApi from "../project-api";
 
 const Projects = () => {
   return (
     <>
-      <Work>
-        <Project>
-          <h2>The Project Topic</h2>
-          <div className="line"></div>
-          <div className="projects"></div>
-        </Project>
+      <Work
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <motion.div variants={sliderContainer}>
+          <Frame1 variants={slider}></Frame1>
+          <Frame2 variants={slider}></Frame2>
+          <Frame3 variants={slider}></Frame3>
+          <Frame4 variants={slider}></Frame4>
+        </motion.div>
+        <motion.h2 variants={fade}>WEB DESIGN</motion.h2>
+        <motion.div variants={lineAnimation} className="line"></motion.div>
+        <Hide>
+          <motion.div variants={photoAnimation} className="projects">
+            {projectApi.map((project) => (
+              <Project
+                name={project.name}
+                tags={project.tags}
+                description={project.description}
+                image={project.image}
+                key={project.name}
+                url={project.url}
+              />
+            ))}
+          </motion.div>
+        </Hide>
+        <ScrollTop />
       </Work>
-      our work
     </>
   );
 };
 
-const Work = styled.div`
-  min-height: 100vh;
+const Work = styled(motion.div)`
   overflow: hidden;
-  padding: 5rem 10rem;
-  h2 {
-    padding: 1rem 0rem;
-  }
-`;
-const Project = styled.div`
-  padding-bottom: 10rem;
+  margin: 2rem 0rem 0rem;
   .line {
     height: 0.5rem;
-    background: #000;
-    margin-bottom: 3rem;
+    background: #23d997;
+    margin-bottom: 2rem;
   }
   .projects {
     width: 100%;
-    height: 70vh;
   }
+  h2 {
+    padding: 0.5rem 0rem;
+    font-size: 48px;
+  }
+`;
+
+const Hide = styled(motion.div)`
+  overflow: hidden;
+`;
+
+// Frame Animation
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 15%;
+  width: 100%;
+  height: 100vh;
+  background: #9b51e0;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #000;
+`;
+const Frame3 = styled(Frame1)`
+  background: rgb(255, 199, 0);
+`;
+const Frame4 = styled(Frame1)`
+  background: #9b51e0;
 `;
 
 export default Projects;

@@ -5,29 +5,15 @@ const GlobalStyle = createGlobalStyle`
 
   *, *::before, *::after {
     margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   body {
     background: white;
     font-family: 'Mulish', sans-serif;
-    margin: 0 11vw;
-  }
-
-  button {
-    font-weight: normal;
-    font-size: 17px;
-    cursor: pointer;
-    padding: 11px 30px;
-    border: 0;
-    border-radius: 150px;
-    background: #9B51E0;
-    color: white;
-    transition: all 0.5s ease;
-    &:hover {
-      background-color: purple;
-    }
+    max-width: 1024px;
+    margin: 0 auto;
   }
 
   h1{
@@ -73,6 +59,26 @@ const GlobalStyle = createGlobalStyle`
 }
 
 
+.technologies__bullets {
+    margin-top: 13px;
+    margin: 13px 0 32px;
+  }
+  .bullet{
+    margin: 7px;
+    padding: 7px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: rgb(255,199,0);
+  }
+
+  .project-text {
+    font-size: 14px;
+    line-height: 110%;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9b51e0;
+  }
 `;
 
 export default GlobalStyle;

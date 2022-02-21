@@ -62,7 +62,7 @@ export const About = styled(motion.div)`
     @media (max-width: 768px) {
       position: static;
       transform: translateY(0);
-      margin-top: 70px;
+      margin-top: 20px;
       margin-right: auto;
       margin-left: auto;
       text-align: center;

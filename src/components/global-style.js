@@ -110,6 +110,21 @@ const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
     color: #9b51e0;
   }
+
+
+  .divider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 1px;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ebebeb;
+  }
+
 `;
 
 export default GlobalStyle;

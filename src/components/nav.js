@@ -64,8 +64,8 @@ const NavStyle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     background: #fff;
 
     @media (max-width: 768px) {
@@ -141,9 +141,13 @@ const NavStyle = styled.div`
     border-radius: 150px;
     background: #9b51e0;
     color: white;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     &:hover {
-      background-color: purple;
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 1;
+      transform: translateY(3px);
     }
 
     @media (max-width: 768px) {

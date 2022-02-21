@@ -5,6 +5,8 @@ import FaqSection from "../components/faq-section";
 import ReviewsSection from "../components/reviews-section";
 import SkillsSection from "../components/skills-section";
 import ScrollTop from "../components/ScrollTop";
+import SayHi from "../components/say-hi";
+import Footer from "../components/footer";
 
 const AboutUs = () => {
   return (
@@ -18,6 +20,8 @@ const AboutUs = () => {
       <SkillsSection />
       <ReviewsSection />
       <FaqSection />
+      <SayHi />
+      <Footer />
       <ScrollTop />
     </motion.div>
   );

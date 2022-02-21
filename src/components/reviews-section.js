@@ -39,7 +39,7 @@ const ReviewsSection = () => {
 const ReviewStyle = styled.div`
   .author_block {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
   }
@@ -55,7 +55,7 @@ const ReviewStyle = styled.div`
     margin-left: 15px;
   }
   .review {
-    max-width: 600px;
+    max-width: 500px;
     margin: 50px auto 10px;
     display: flex;
     justify-content: center;

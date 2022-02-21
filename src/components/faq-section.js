@@ -12,10 +12,10 @@ const FaqSection = () => {
   return (
     <div className="section">
       <Faq
-        variants={scrollReveal}
+        // variants={scrollReveal}
         ref={element}
-        animate={controls}
-        initial="hidden"
+        // animate={controls}
+        // initial="hidden"
       >
         <div className="faq">
           <h2>
@@ -88,19 +88,19 @@ const Faq = styled(About)`
     margin-bottom: 60px;
   }
   h4 {
-    margin-top: 49px;
-    font-size: 36px;
+    margin-top: 42px;
+    font-size: 32px;
     font-weight: 400;
 
     @media (max-width: 768px) {
       font-size: 24px;
-      margin-top: 30px;
+      margin-top: 28px;
     }
   }
   .faq-line {
     background: black;
-    height: 0.2rem;
-    margin: 28px 0px;
+    height: 3px;
+    margin: 18px 0px;
     width: 100%;
   }
 `;

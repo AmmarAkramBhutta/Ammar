@@ -87,13 +87,13 @@ const Frame1 = styled(motion.div)`
 `;
 
 const Frame2 = styled(Frame1)`
-  background: #000;
+  background: #1c1d1f;
 `;
 const Frame3 = styled(Frame1)`
-  background: rgb(255, 199, 0);
+  background: #f40000;
 `;
 const Frame4 = styled(Frame1)`
-  background: #9b51e0;
+  background: rgb(255, 199, 0);
 `;
 
 export default Projects;

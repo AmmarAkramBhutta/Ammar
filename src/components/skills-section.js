@@ -82,6 +82,13 @@ const Skills = styled.div`
     line-height: 32px;
     margin-bottom: 10px;
   }
+
+  .technologies {
+    margin: 10px;
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 export default SkillsSection;

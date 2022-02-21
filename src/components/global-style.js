@@ -34,20 +34,21 @@ const GlobalStyle = createGlobalStyle`
   h1{
     font-weight: 400;
     font-family: 'Abril Fatface', serif;
-    font-size: 105px;
+    font-size: 96px;
     line-height: 89%;
 
     @media (max-width: 768px) {
-      font-size: 96px;
+      font-size: 76px;
     }
   }
 
   h2 {
-    font-size:56px ;
+    font-size:54px ;
     font-family: 'Abril Fatface', serif;
     font-weight: 400;
 
     @media(max-width: 768px){
+      font-size: 42px;
       text-align: center;
     }
   }
@@ -64,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   position: relative;
   padding: 7px 0.03125em;
   white-space: nowrap;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -73,6 +74,8 @@ const GlobalStyle = createGlobalStyle`
   @media(max-width: 768px){
       margin: 0 auto;
       text-align: center;
+      font-size: 14px;
+      letter-spacing: 1.5px;
     }
 }
 

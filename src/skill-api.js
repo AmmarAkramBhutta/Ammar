@@ -27,7 +27,7 @@ const skillApi = [
     name: "Backend Web Development",
     description:
       "Be it website or mobile app design, my clients get the product that has the best combination of outstanding user experience and visual aesthetics.",
-    tags: ["Python", "JavaScript", "Node", "JavaScript"],
+    tags: ["Python", "Node", "JavaScript"],
   },
   {
     id: 4,

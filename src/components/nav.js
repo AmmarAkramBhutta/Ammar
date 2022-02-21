@@ -39,7 +39,7 @@ const Nav = () => {
               />
             </li>
             <li>
-              <Link style={{ border: "0" }} to="/contact">
+              <Link className="abutton" style={{ border: "0" }} to="/contact">
                 <button>Contact</button>
               </Link>
             </li>
@@ -51,14 +51,19 @@ const Nav = () => {
 };
 
 const NavStyle = styled.div`
+  .section {
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
   header {
     top: -3px;
     left: 0;
     width: 100%;
+    background-clip: padding-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000000;
     padding-top: 30px;
     padding-bottom: 10px;
     background: #fff;
@@ -82,13 +87,17 @@ const NavStyle = styled.div`
     width: 227px;
   }
   header ul {
+    z-index: 1000000;
+    background: #fff;
+    background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 768px) {
-      margin-top: 20px;
+      padding: 10px 0;
+      width: 100%;
       flex-wrap: wrap;
     }
   }
@@ -115,6 +124,14 @@ const NavStyle = styled.div`
     transition: opacity 0.02s;
   }
 
+  .abutton {
+    margin-right: 0;
+
+    @media (max-width: 768px) {
+      margin: 0 10px;
+    }
+  }
+
   button {
     font-size: 16px;
     font-weight: bold;
@@ -127,6 +144,10 @@ const NavStyle = styled.div`
     transition: all 0.5s ease;
     &:hover {
       background-color: purple;
+    }
+
+    @media (max-width: 768px) {
+      margin: 10px 0;
     }
   }
 `;

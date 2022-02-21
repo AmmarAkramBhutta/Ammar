@@ -73,7 +73,7 @@ export const About = styled(motion.div)`
     position: absolute;
     left: 50%;
     top: 1%;
-    transform: translateX(-10%);
+    transform: translateX(-23%);
 
     @media (max-width: 984px) {
       transform: translateX(-23%);
@@ -127,7 +127,7 @@ export const About = styled(motion.div)`
     padding: 7px 0.03125em;
     white-space: nowrap;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 28px;
     width: auto;
   }
 

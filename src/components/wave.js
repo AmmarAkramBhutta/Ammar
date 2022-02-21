@@ -22,9 +22,15 @@ const Wave = () => {
 
 const WaveSvg = styled.svg`
   position: absolute;
-  top: 30vh;
+  top: 20vh;
   left: 0;
   z-index: -7;
+
+  path {
+    @media (max-width: 768px) {
+      stroke-width: 12;
+    }
+  }
 `;
 
 export default Wave;

@@ -27,8 +27,10 @@ const ProjectDetail = () => {
           animate="show"
           exit="exit"
         >
-          <h1>{project.name}</h1>
-          <img src={project.image} alt={project.name} />
+          <div className="section">
+            <h1>{project.name}</h1>
+            <img src={project.image} alt={project.name} />
+          </div>
         </Details>
       )}
     </>
@@ -36,7 +38,9 @@ const ProjectDetail = () => {
 };
 
 const Details = styled(motion.div)`
-  padding-top: 10px;
+  .section {
+    padding-top: 10px;
+  }
 `;
 
 export default ProjectDetail;

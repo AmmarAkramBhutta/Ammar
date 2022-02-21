@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import designIcon from "../img/idea.png";
 import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
-import { motion } from "framer-motion";
+import skillApi from "../skill-api";
 
 const SkillsSection = () => {
   const [element, controls] = useScroll();
@@ -13,50 +12,57 @@ const SkillsSection = () => {
       initial="hidden"
       ref={element}
     >
-      <div>
+      <div className="section" id="whatido">
         <h2>
           What I <span className="purpled">do</span>.
         </h2>
         <div className="skills">
-          <div className="skill">
-            <img className="skill__logo" src={designIcon} alt="web design" />
-            <div className="skill__title">
-              <strong>Web Design</strong>
-            </div>
-            <div className="skill__description">
-              I build websites in Webflow where I can create responsive,
-              powerful and fully custom websites. Plus, Webflow has an
-              incredibly simple Content Editor for you and your team to edit
-              website content quickly and easily.
-            </div>
-            <div className="technologies">
-              <h3>
-                <b>Technologies</b>:
-              </h3>
-              <div className="technologies__bullets">
-                <span className="bullet">HTML</span>
-                <span className="bullet">CSS</span>
-                <span className="bullet">CSS</span>
-                <span className="bullet">CSS</span>
+          {skillApi.map((skill) => {
+            return (
+              <div className="skill" key={skill.id}>
+                <img
+                  className="skill__logo"
+                  src={skill.image}
+                  alt="web design"
+                />
+                <div className="skill__title">
+                  <strong>{skill.name}</strong>
+                </div>
+                <div className="skill__description">{skill.description}</div>
+                <div className="technologies">
+                  <h3>
+                    <b>Technologies</b>:
+                  </h3>
+                  <div className="technologies__bullets">
+                    {skill.tags.map((tag) => (
+                      <span className="bullet" key={Math.random()}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </Skills>
   );
 };
 
-const Skills = styled(motion.div)`
+const Skills = styled.div`
+  .section {
+    margin-top: 130px;
+  }
   .skills {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .skill {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    max-width: 400px;
+    margin: 40px 20px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;

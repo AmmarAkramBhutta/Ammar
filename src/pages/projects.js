@@ -21,29 +21,31 @@ const Projects = () => {
         animate="show"
         exit="exit"
       >
-        <motion.div variants={sliderContainer}>
-          <Frame1 variants={slider}></Frame1>
-          <Frame2 variants={slider}></Frame2>
-          <Frame3 variants={slider}></Frame3>
-          <Frame4 variants={slider}></Frame4>
-        </motion.div>
-        <motion.h2 variants={fade}>WEB DESIGN</motion.h2>
-        <motion.div variants={lineAnimation} className="line"></motion.div>
-        <Hide>
-          <motion.div variants={photoAnimation} className="projects">
-            {projectApi.map((project) => (
-              <Project
-                name={project.name}
-                tags={project.tags}
-                description={project.description}
-                image={project.image}
-                key={project.name}
-                url={project.url}
-              />
-            ))}
+        <div className="section">
+          <motion.div variants={sliderContainer}>
+            <Frame1 variants={slider}></Frame1>
+            <Frame2 variants={slider}></Frame2>
+            <Frame3 variants={slider}></Frame3>
+            <Frame4 variants={slider}></Frame4>
           </motion.div>
-        </Hide>
-        <ScrollTop />
+          <motion.h2 variants={fade}>WEB DESIGN</motion.h2>
+          <motion.div variants={lineAnimation} className="line"></motion.div>
+          <Hide>
+            <motion.div variants={photoAnimation} className="projects">
+              {projectApi.map((project) => (
+                <Project
+                  name={project.name}
+                  tags={project.tags}
+                  description={project.description}
+                  image={project.image}
+                  key={project.name}
+                  url={project.url}
+                />
+              ))}
+            </motion.div>
+          </Hide>
+          <ScrollTop />
+        </div>
       </Work>
     </>
   );
@@ -52,6 +54,9 @@ const Projects = () => {
 const Work = styled(motion.div)`
   overflow: hidden;
   margin: 2rem 0rem 0rem;
+  .section {
+    padding: 0;
+  }
   .line {
     height: 0.5rem;
     background: #23d997;

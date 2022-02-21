@@ -11,7 +11,6 @@ const ScrollTop = () => {
     });
   }, [pathname]);
 
-  console.log(pathname);
   return null;
 };
 

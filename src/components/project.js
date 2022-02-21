@@ -3,31 +3,33 @@ import styled from "styled-components";
 
 const Project = ({ name, tags, description, image, url }) => {
   return (
-    <div className="main-div">
-      <h4 className="project-text">Latest Work</h4>
-      <ProjectStyle>
-        <div className="title">
-          <h2>{name}</h2>
-          <div className="technologies__bullets">
-            {tags.map((tag) => (
-              <span className="bullet" key={tag}>
-                {tag}
-              </span>
-            ))}
+    <div className="section">
+      <div className="main-div">
+        <h4 className="project-text">Latest Work</h4>
+        <ProjectStyle>
+          <div className="title">
+            <h2>{name}</h2>
+            <div className="technologies__bullets">
+              {tags.map((tag) => (
+                <span className="bullet" key={tag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="description">
-          <p>{description}</p>
-          <div className="button-border">
-            <Link to={url} className="button">
-              See this project
-            </Link>
+          <div className="description">
+            <p>{description}</p>
+            <div className="button-border">
+              <Link to={url} className="button">
+                See this project
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="image">
-          <img src={image} alt={name} />
-        </div>
-      </ProjectStyle>
+          <div className="image">
+            <img src={image} alt={name} />
+          </div>
+        </ProjectStyle>
+      </div>
     </div>
   );
 };

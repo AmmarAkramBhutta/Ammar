@@ -12,24 +12,46 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: white;
     font-family: 'Mulish', sans-serif;
-    max-width: 1024px;
-    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  p, button {
+    font-family: 'Mulish', sans-serif;
+
+  }
+
+  .section {
+    display: block;
+    max-width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media(max-width: 1120px) {
+      margin: 0 10px;
+    }
   }
 
   h1{
     font-weight: 400;
-    font-family: 'Abril Fatface';
+    font-family: 'Abril Fatface', serif;
     font-size: 105px;
     line-height: 89%;
+
+    @media (max-width: 768px) {
+      font-size: 96px;
+    }
   }
 
   h2 {
     font-size:56px ;
     font-family: 'Abril Fatface', serif;
     font-weight: 400;
+
+    @media(max-width: 768px){
+      text-align: center;
+    }
   }
   p{
-    font-family: 'Mulish', sans-serif;
     font-size: 18px;
     line-height: 180%;
   }
@@ -46,6 +68,12 @@ const GlobalStyle = createGlobalStyle`
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+  width: fit-content; 
+
+  @media(max-width: 768px){
+      margin: 0 auto;
+      text-align: center;
+    }
 }
 
 

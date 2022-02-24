@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     background: white;
     font-family: 'Mulish', sans-serif;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 
   p, button {

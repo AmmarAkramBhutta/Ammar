@@ -136,6 +136,11 @@ const NavStyle = styled.div`
     opacity: 0.6;
     transition: opacity 0.3s;
   }
+
+  header ul li .navlink:active {
+    /* border-bottom: 2px solid #9b51e0; */
+    opacity: 1;
+  }
 `;
 
 const Line = styled(motion.span)`

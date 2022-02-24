@@ -3,6 +3,8 @@ import Logo from "../img/logo.svg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import ContactButton from "./contact-button";
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -16,12 +18,14 @@ const Nav = () => {
     <NavStyle>
       <div className="section">
         <header className='{isSticky ? "sticky" : ""}'>
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" className="navlink">
             <img src={Logo} alt="Ammar Akram" />
           </Link>
           <ul>
             <li>
-              <Link to="/">Qualifications</Link>
+              <Link to="/" className="navlink qual">
+                Qualifications
+              </Link>
               <Line
                 transition={{ duration: 0.75 }}
                 initial={{ width: 0 }}
@@ -31,7 +35,9 @@ const Nav = () => {
               />
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to="/projects" className="navlink">
+                Projects
+              </Link>
               <Line
                 transition={{ duration: 0.75 }}
                 initial={{ width: 0 }}
@@ -39,9 +45,9 @@ const Nav = () => {
               />
             </li>
             <li>
-              <Link className="abutton" style={{ border: "0" }} to="/contact">
-                <button>Contact</button>
-              </Link>
+              <div className="ml15">
+                <ContactButton title="Email Me" />
+              </div>
             </li>
           </ul>
         </header>
@@ -51,10 +57,17 @@ const Nav = () => {
 };
 
 const NavStyle = styled.div`
+  .qual {
+    display: none;
+  }
+
   .section {
     @media (max-width: 768px) {
       margin: 0;
     }
+  }
+  .ml15 {
+    margin-left: 15px;
   }
   header {
     top: -3px;
@@ -87,7 +100,7 @@ const NavStyle = styled.div`
     width: 227px;
   }
   header ul {
-    z-index: 1000000;
+    z-index: 1000;
     background: #fff;
     background-size: cover;
     position: relative;
@@ -105,7 +118,7 @@ const NavStyle = styled.div`
     position: relative;
     list-style: none;
   }
-  header ul li a {
+  header ul li .navlink {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -118,41 +131,10 @@ const NavStyle = styled.div`
     }
   }
 
-  header ul li a:hover {
+  header ul li .navlink:hover {
     /* border-bottom: 2px solid #9b51e0; */
-    opacity: 0.8;
-    transition: opacity 0.02s;
-  }
-
-  .abutton {
-    margin-right: 0;
-
-    @media (max-width: 768px) {
-      margin: 0 10px;
-    }
-  }
-
-  button {
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 11px 30px;
-    border: 0;
-    border-radius: 150px;
-    background: #9b51e0;
-    color: white;
-    transition: all 0.2s ease;
-    &:hover {
-      opacity: 0.9;
-    }
-    &:active {
-      opacity: 1;
-      transform: translateY(3px);
-    }
-
-    @media (max-width: 768px) {
-      margin: 10px 0;
-    }
+    opacity: 0.6;
+    transition: opacity 0.3s;
   }
 `;
 

@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
   h1{
     font-weight: 400;
     font-family: 'Abril Fatface', serif;
-    font-size: 96px;
+    font-size: 92px;
     line-height: 89%;
 
     @media (max-width: 768px) {
@@ -93,6 +93,8 @@ const GlobalStyle = createGlobalStyle`
 .technologies__bullets {
     margin-top: 13px;
     margin: 13px 0 32px;
+     user-select: none;
+      -moz-user-select: none
   }
   .bullet{
     margin: 7px;
@@ -109,6 +111,9 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #9b51e0;
+    @media(max-width: 768px){
+      text-align: center;
+    }
   }
 
 
@@ -125,6 +130,9 @@ const GlobalStyle = createGlobalStyle`
     background-color: #ebebeb;
   }
 
+  .centered {
+    text-align: center;
+  }
 `;
 
 export default GlobalStyle;

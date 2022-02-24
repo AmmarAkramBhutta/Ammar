@@ -56,7 +56,7 @@ const FaqSection = () => {
                   </div>
                 </div>
               </Toggle> */}
-              <Toggle title="What Services do you offer">
+              <Toggle title="What Services do you offer?">
                 <div className="question">
                   <div className="answer">
                     <p>

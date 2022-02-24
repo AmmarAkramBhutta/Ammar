@@ -58,7 +58,7 @@ export const About = styled(motion.div)`
     position: absolute;
     top: 60%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 3000;
     @media (max-width: 768px) {
       position: static;
       transform: translateY(0);
@@ -73,6 +73,8 @@ export const About = styled(motion.div)`
     position: absolute;
     left: 50%;
     top: 1%;
+    z-index: 2000;
+
     transform: translateX(-23%);
 
     @media (max-width: 984px) {
@@ -87,7 +89,7 @@ export const About = styled(motion.div)`
   }
 
   .main-image {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: -15px;
     display: block;
     max-width: 545px;
@@ -117,7 +119,7 @@ export const About = styled(motion.div)`
 
   p {
     padding-top: 20px;
-    background-color: hsla(0, 0%, 100%, 0.5);
+    background-color: hsla(0, 0%, 100%, 0.4);
     @media (max-width: 984px) {
     }
   }

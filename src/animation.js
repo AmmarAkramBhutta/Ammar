@@ -7,16 +7,16 @@ export const pageAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.75,
       when: "beforeChildren",
-      staggerChildren: 0.4,
+      staggerChildren: 0.3,
     },
   },
   exit: {
     opacity: 0,
     y: 300,
     transition: {
-      duration: 0.5,
+      duration: 0.75,
     },
   },
 };
@@ -26,7 +26,7 @@ export const titleAnimation = {
   show: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -45,7 +45,7 @@ export const photoAnimation = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 1,
+      duration: 0.7,
     },
   },
 };
@@ -59,7 +59,7 @@ export const waveAnimation = {
     pathLength: 1,
     pathOffset: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
     },
   },
 };
@@ -79,7 +79,7 @@ export const slider = {
   show: {
     x: "100%",
     skew: "0deg",
-    transition: { ease: "easeOut", duration: 1 },
+    transition: { ease: "easeOut", duration: 0.8 },
   },
 };
 

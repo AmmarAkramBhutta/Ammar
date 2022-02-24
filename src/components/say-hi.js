@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import ContactButton from "./contact-button";
 
 const SayHi = () => {
   return (
@@ -13,9 +14,9 @@ const SayHi = () => {
           If you want any website related work, send me an email and I'll
           respond as soon as possible.
         </p>
-        <Link to="/contact">
-          <button>Contact</button>
-        </Link>
+        <div className="button">
+          <ContactButton title="Send me an Email" />
+        </div>
       </div>
     </SayHiStyle>
   );
@@ -23,14 +24,21 @@ const SayHi = () => {
 
 const SayHiStyle = styled.div`
   position: relative;
-  margin: 40px auto 30px;
-  padding-top: 90px;
-  padding-bottom: 120px;
+  margin: 60px auto 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
   max-width: 730px;
 
   h1 {
     font-size: 60px;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+  a {
+    min-width: 220px;
   }
 
   p {
@@ -41,13 +49,13 @@ const SayHiStyle = styled.div`
     margin-left: auto;
     line-height: 160%;
   }
-
+  /* 
   button {
     margin-top: 30px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    padding: 12px 50px;
+    padding: 3px 50px;
     border: 0;
     border-radius: 150px;
     background: #9b51e0;
@@ -60,7 +68,7 @@ const SayHiStyle = styled.div`
       opacity: 1;
       transform: translateY(3px);
     }
-  }
+  } */
 `;
 
 export default SayHi;

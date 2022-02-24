@@ -3,60 +3,88 @@ import styled from "styled-components";
 
 const Project = ({ name, tags, description, image, url }) => {
   return (
-    <div className="section">
-      <div className="main-div">
-        <h4 className="project-text">Latest Work</h4>
-        <ProjectStyle>
-          <div className="title">
-            <h2>{name}</h2>
-            <div className="technologies__bullets">
-              {tags.map((tag) => (
-                <span className="bullet" key={tag}>
-                  {tag}
-                </span>
-              ))}
+    <ProjectStyle>
+      <div className="section">
+        <div className="main-div">
+          <h4 className="project-text">Latest Work</h4>
+          <div className="grid">
+            <div className="title">
+              <h2>{name}</h2>
+              <div className="technologies__bullets">
+                {tags.map((tag) => (
+                  <span className="bullet" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="description">
+              <p>{description}</p>
+              <div className="button-border">
+                <Link to={url} className="button">
+                  See this project
+                </Link>
+              </div>
+            </div>
+            <div className="image">
+              <img src={image} alt={name} />
             </div>
           </div>
-          <div className="description">
-            <p>{description}</p>
-            <div className="button-border">
-              <Link to={url} className="button">
-                See this project
-              </Link>
-            </div>
-          </div>
-          <div className="image">
-            <img src={image} alt={name} />
-          </div>
-        </ProjectStyle>
+        </div>
       </div>
-    </div>
+    </ProjectStyle>
   );
 };
 
 const ProjectStyle = styled.div`
+  .grid {
+    display: grid;
+    grid-template-areas:
+      ". image"
+      "description image";
+    padding-bottom: 82px;
+    -webkit-box-align: center;
+    align-items: center;
+    grid-column-gap: 50px;
+    grid-row-gap: 14px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-row-gap: 3px;
+      grid-template-areas:
+        "."
+        "image"
+        "description";
+      align-items: center;
+    }
+  }
+
   .main-div {
     padding: 54px 0 82px;
   }
-  display: grid;
-  grid-template-areas:
-    ". image"
-    ". image";
-  padding-bottom: 82px;
-  -webkit-box-align: center;
-  align-items: center;
-  grid-column-gap: 60px;
-  grid-row-gap: 14px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+
   .title {
     align-self: flex-start;
   }
   .image {
     grid-area: image;
+
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+  }
+  .description {
+    grid-area: description;
   }
   p {
+    max-width: 480px;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   h2 {
@@ -66,9 +94,6 @@ const ProjectStyle = styled.div`
     font-size: 7vh;
     line-height: 137%;
     font-weight: 400;
-  }
-  p {
-    max-width: 480px;
   }
 
   .button-border {
@@ -81,7 +106,6 @@ const ProjectStyle = styled.div`
 
   .button {
     min-width: 200px;
-
     border-style: solid;
     border-width: 3px;
     border-color: #000;

@@ -16,7 +16,7 @@ const Project = ({ name, tags, description, image, url }) => {
           <div className="grid">
             <div className="title">
               <h2>{name}</h2>
-              <div className="technologies__bullets">
+              <div className="technologies__bullets two">
                 {tags.map((tag) => (
                   <span className="bullet" key={tag}>
                     {tag}
@@ -147,6 +147,10 @@ const ProjectStyle = styled(motion.div)`
         rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
       transform-style: preserve-3d;
     }
+  }
+
+  .two {
+    justify-content: start;
   }
 `;
 

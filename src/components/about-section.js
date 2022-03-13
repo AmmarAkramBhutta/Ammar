@@ -46,6 +46,8 @@ const AboutSection = () => {
 };
 
 export const About = styled(motion.div)`
+  position: relative;
+
   .scroll-block {
     margin-right: 40px;
     -webkit-text-size-adjust: 100%;
@@ -139,7 +141,6 @@ export const About = styled(motion.div)`
   }
 
   .flexbox {
-    position: relative;
     min-height: 470px;
     padding-top: 10px;
   }

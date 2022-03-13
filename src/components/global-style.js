@@ -95,12 +95,17 @@ const GlobalStyle = createGlobalStyle`
 
 .technologies__bullets {
     margin-top: 13px;
-    margin: 13px 0 32px;
+    margin: 13px 0 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
      user-select: none;
-      -moz-user-select: none
+    -moz-user-select: none;
+    justify-content: center;
   }
   .bullet{
-    margin: 7px;
+    display: inline-block;
+    margin: 7px 14px 7px 0;
     padding: 7px 10px;
     font-weight: bold;
     font-size: 13px;

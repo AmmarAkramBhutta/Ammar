@@ -86,7 +86,7 @@ const Skills = styled.div`
   .technologies {
     margin: 10px;
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
 `;

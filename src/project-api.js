@@ -70,7 +70,7 @@ const projectApi = [
     url: "/projects/news-website",
     name: "Developer News Website",
     link: "https://dev.cell/",
-    tags: ["Wordpress", "PHP", "JavaScript"],
+    tags: ["Wordpress", "PHP", "JavaScript", "Figma"],
     description:
       "A website of a complex news site design. It is for developers that will help the professionals solve problems and get latest insights from their field.",
     image: dc,
@@ -80,7 +80,7 @@ const projectApi = [
     url: "/projects/chat-app",
     name: "Chat App Website",
     link: "https://chat-app-homepage.webflow.io/",
-    tags: ["Webflow"],
+    tags: ["Webflow", "Figma"],
     description:
       "This is a homepage design and build for a concept project - a chat application. I designed the page first then built a responsive web page using Webflow.",
     image: chatapp,
@@ -90,7 +90,7 @@ const projectApi = [
     url: "/projects/team-app",
     name: "Team App Website",
     link: "https://team-app.webflow.io/",
-    tags: ["Webflow"],
+    tags: ["Webflow", "Figma"],
     description:
       "Full website design and build for a concept team collaboration platform. This website also includes a beautiful blog. I have built the website and the blog in Webflow which has one of the best CMS for blog hosting.",
     image: teamapp,
@@ -100,7 +100,7 @@ const projectApi = [
     url: "/projects/webdesign-portfolio",
     name: "Web Design Portfolio Website",
     link: "https://ammarakram2.webflow.io/",
-    tags: ["Webflow"],
+    tags: ["Webflow", "Figma"],
     description:
       "An interactive website to showcase my web design skills built using a powerful content management system, Webflow",
     image: Homepage,

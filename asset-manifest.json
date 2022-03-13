@@ -1,18 +1,24 @@
 {
   "files": {
-    "main.js": "/static/js/main.1585373b.js",
+    "main.js": "/static/js/main.0c7488d6.js",
     "static/js/787.f2a21cbb.chunk.js": "/static/js/787.f2a21cbb.chunk.js",
-    "static/media/main-image.png": "/static/media/main-image.c07f54e43cfb09c82962.png",
-    "static/media/ph.jpeg": "/static/media/ph.168c12b1a1d50fe28545.jpeg",
+    "static/media/powercell.png": "/static/media/powercell.d0e2c2df156d4facbc9f.png",
+    "static/media/dc.jpg": "/static/media/dc.31d76a03a7790b645d68.jpg",
+    "static/media/teamapp.jpg": "/static/media/teamapp.d4a29eae8b5ff9b6a57f.jpg",
+    "static/media/chatapp.jpg": "/static/media/chatapp.b94f31f4d9c22ccf5115.jpg",
+    "static/media/Homepage.jpg": "/static/media/Homepage.43098556ef5554c00577.jpg",
+    "static/media/main-image.png": "/static/media/main-image.327df03b5da2dd6baa6c.png",
+    "static/media/jdiary.png": "/static/media/jdiary.39299f59ea0f39943747.png",
+    "static/media/musicapp.png": "/static/media/musicapp.02a3cde838e0cf744ded.png",
     "static/media/backend.png": "/static/media/backend.5c715eb2c75e45204724.png",
     "static/media/idea.png": "/static/media/idea.1a55cdcda2a425c35b40.png",
     "static/media/cms.png": "/static/media/cms.4210be78f0c2dc864e5e.png",
     "static/media/logo.svg": "/static/media/logo.9da6b59ba341e1433f3219c925d5ffeb.svg",
     "index.html": "/index.html",
-    "main.1585373b.js.map": "/static/js/main.1585373b.js.map",
+    "main.0c7488d6.js.map": "/static/js/main.0c7488d6.js.map",
     "787.f2a21cbb.chunk.js.map": "/static/js/787.f2a21cbb.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1585373b.js"
+    "static/js/main.0c7488d6.js"
   ]
 }

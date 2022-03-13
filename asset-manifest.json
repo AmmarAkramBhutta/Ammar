@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.0c7488d6.js",
+    "main.js": "/static/js/main.ea126185.js",
     "static/js/787.f2a21cbb.chunk.js": "/static/js/787.f2a21cbb.chunk.js",
     "static/media/powercell.png": "/static/media/powercell.d0e2c2df156d4facbc9f.png",
     "static/media/dc.jpg": "/static/media/dc.31d76a03a7790b645d68.jpg",
@@ -15,10 +15,10 @@
     "static/media/cms.png": "/static/media/cms.4210be78f0c2dc864e5e.png",
     "static/media/logo.svg": "/static/media/logo.9da6b59ba341e1433f3219c925d5ffeb.svg",
     "index.html": "/index.html",
-    "main.0c7488d6.js.map": "/static/js/main.0c7488d6.js.map",
+    "main.ea126185.js.map": "/static/js/main.ea126185.js.map",
     "787.f2a21cbb.chunk.js.map": "/static/js/787.f2a21cbb.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0c7488d6.js"
+    "static/js/main.ea126185.js"
   ]
 }

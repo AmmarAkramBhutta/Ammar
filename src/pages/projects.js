@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import styled from "styled-components";
 import {
   fade,
@@ -14,6 +15,14 @@ import ScrollTop from "../components/ScrollTop";
 import projectApi from "../project-api";
 
 const Projects = () => {
+  const [projectState, setProjectState] = useState(projectApi);
+  const [selected, setSelected] = useState("all");
+
+  const filterID = (keyword) => {
+    const filtered = projectApi.filter((project) => project.id === keyword);
+    setProjectState(filtered);
+  };
+
   return (
     <>
       <Work
@@ -33,26 +42,78 @@ const Projects = () => {
             My <span className="purpled">Projects</span>.
           </motion.h2>
           <motion.div variants={lineAnimation} className="line"></motion.div>
+
+          <motion.div className="filter" variants={fade}>
+            <div
+              className={selected === "all" ? "item_active" : ""}
+              onClick={() => {
+                setSelected("all");
+                setProjectState(projectApi);
+              }}
+            >
+              All
+            </div>
+            <div
+              onClick={() => {
+                filterID("cms");
+                setSelected("uiux");
+              }}
+              className={selected === "uiux" ? "item_active" : ""}
+            >
+              UI/UX
+            </div>
+            <div
+              onClick={() => {
+                setSelected("frontend");
+                filterID("frontend");
+              }}
+              className={selected === "frontend" ? "item_active" : ""}
+            >
+              Frontend
+            </div>
+            <div
+              onClick={() => {
+                setSelected("backend");
+                filterID("fullstack");
+              }}
+              className={selected === "backend" ? "item_active" : ""}
+            >
+              Backend
+            </div>
+            <div
+              onClick={() => {
+                setSelected("fullstack");
+                filterID("fullstack");
+              }}
+              className={selected === "fullstack" ? "item_active" : ""}
+            >
+              Full Stack
+            </div>
+            <div
+              onClick={() => {
+                setSelected("cms");
+                filterID("cms");
+              }}
+              className={selected === "cms" ? "item_active" : ""}
+            >
+              CMS
+            </div>
+          </motion.div>
+
           <Hide>
-            <motion.div variants={photoAnimation} className="projects">
-              <div className="filter">
-                <div className="item_active">All</div>
-                <div>UI/UX</div>
-                <div>Frontend Development</div>
-                <div>Backend Development</div>
-                <div>Full Stack</div>
-                <div>CMS</div>
-              </div>
-              {projectApi.map((project) => (
-                <Project
-                  name={project.name}
-                  tags={project.tags}
-                  description={project.description}
-                  image={project.image}
-                  key={project.name}
-                  url={project.url}
-                />
-              ))}
+            <motion.div variants={photoAnimation} className="projects" layout>
+              <AnimatePresence>
+                {projectState.map((project) => (
+                  <Project
+                    name={project.name}
+                    tags={project.tags}
+                    description={project.description}
+                    image={project.image}
+                    key={project.name}
+                    url={project.url}
+                  />
+                ))}
+              </AnimatePresence>
             </motion.div>
           </Hide>
           <ScrollTop />

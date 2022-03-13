@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ContactButton from "./contact-button";
 
 const SayHi = () => {
   return (
-    <SayHiStyle>
+    <SayHiStyle id="contact">
       <div className="divider"></div>
       <div className="section">
         <h1>

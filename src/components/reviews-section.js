@@ -20,10 +20,11 @@ const ReviewsSection = () => {
         </h2>
         <div className="highlite">What people say about Ammar</div>
         <div className="wrapper">
-          <div className="review">
-            <p className="reviewtext">
-              “ Ammar was very helpful and patience in understanding the work
-              that needed to be done on my website.... ”
+          <div className="review reviewtext">
+            <p>
+              “Ammar was very helpful and patience in understanding the work
+              that needed to be done on my website. <br />I will recommend him
+              for any website related work needed.”
             </p>
           </div>
         </div>

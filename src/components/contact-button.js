@@ -4,13 +4,14 @@ import styled from "styled-components";
 const ContactButton = ({ title }) => {
   const [toggle, setToggle] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+
   return (
     <ButtonStyle>
       <div className="popup">
         <div className={`popuptext ${toggle ? "show" : ""}`} id="myPopup">
           Click to Copy
         </div>
-        <a
+        <span
           onMouseOver={() => setToggle(true)}
           onMouseLeave={() => setToggle(false)}
           onClick={() => {
@@ -24,15 +25,15 @@ const ContactButton = ({ title }) => {
           className={isCopied ? "clicked" : ""}
         >
           {title}
-        </a>
-        {isCopied && <a className="overlay_button">Email Copied</a>}
+        </span>
+        {isCopied && <span className="overlay_button">Email Copied</span>}
       </div>
     </ButtonStyle>
   );
 };
 
 const ButtonStyle = styled.div`
-  a {
+  span {
     width: 100%;
     display: block;
     position: relative;
@@ -89,6 +90,7 @@ const ButtonStyle = styled.div`
   .popup .popuptext {
     font-size: 13px;
     line-height: 28px;
+    letter-spacing: 1px;
     font-style: normal;
     text-align: center;
     visibility: hidden;

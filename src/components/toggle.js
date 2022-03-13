@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import styled from "styled-components";
-import { About } from "./about-section";
 
 const Toggle = ({ title, children }) => {
   const [toggle, setToggle] = useState(false);

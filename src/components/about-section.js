@@ -36,19 +36,110 @@ const AboutSection = () => {
             />
           </div>
         </div>
+        <div className="scroll-block">
+          <div className="scroll-arrow"></div>
+          <div className="scroll-text">scroll</div>
+        </div>
       </div>
     </About>
   );
 };
 
 export const About = styled(motion.div)`
-  position: relative;
+  .scroll-block {
+    margin-right: 40px;
+    -webkit-text-size-adjust: 100%;
+    color: #000;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: right;
+    box-sizing: border-box;
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    display: inline-block;
+    overflow: hidden;
+    width: 46px;
+    height: 105px;
+
+    @media (max-width: 1000px) {
+      visibility: hidden;
+    }
+  }
+
+  .scroll-arrow {
+    -webkit-text-size-adjust: 100%;
+    color: #000;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: right;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    display: inline-block;
+    width: 2px;
+    height: 105px;
+    background-color: #000;
+    transform-origin: 50% 100%;
+    animation-name: line;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+  }
+
+  @keyframes line {
+    0% {
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+    30% {
+      transform: translate3d(0px, 110px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+    60% {
+      transform: translate3d(0px, -110px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+    100% {
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+  }
+
+  .scroll-text {
+    -webkit-text-size-adjust: 100%;
+    font-family: "Mulish", sans-serif;
+    color: #000;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: right;
+    box-sizing: border-box;
+    position: absolute;
+    left: 46px;
+    top: 0%;
+    right: auto;
+    letter-spacing: 300%;
+    bottom: auto;
+    display: inline-block;
+    transform: perspective(0px) rotate(90deg);
+    transform-origin: 0% 0%;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
   .firstname {
     @media (max-width: 768px) {
       transform: translate(5px);
     }
   }
+
   .flexbox {
+    position: relative;
     min-height: 470px;
     padding-top: 10px;
   }
@@ -118,7 +209,7 @@ export const About = styled(motion.div)`
   }
 
   p {
-    padding-top: 20px;
+    margin-top: 20px;
     background-color: hsla(0, 0%, 100%, 0.4);
     @media (max-width: 984px) {
     }
@@ -131,6 +222,8 @@ export const About = styled(motion.div)`
     font-weight: bold;
     font-size: 28px;
     width: auto;
+    user-select: none;
+    -moz-user-select: none;
   }
 
   .full-stack::after {

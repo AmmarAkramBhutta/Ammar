@@ -8,7 +8,7 @@ const skillApi = [
   {
     id: 1,
     image: designIcon,
-    name: "Website Designing",
+    name: "Website Design, UI / UX",
     description:
       "Be it website or mobile app design, my clients get the product that has the best combination of outstanding user experience and visual aesthetics.",
     tags: ["Figma", "HTML", "CSS", "Webflow"],
@@ -18,7 +18,7 @@ const skillApi = [
     image: frontendIcon,
     name: "Frontend Web Development",
     description:
-      "Be it website or mobile app design, my clients get the product that has the best combination of outstanding user experience and visual aesthetics.",
+      "I make frontend of websites using my design skills with cutting edge tools, techniques and standards with performance at priority.",
     tags: ["React", "JavaScript", "CSS"],
   },
   {
@@ -26,24 +26,24 @@ const skillApi = [
     image: backendIcon,
     name: "Backend Web Development",
     description:
-      "Be it website or mobile app design, my clients get the product that has the best combination of outstanding user experience and visual aesthetics.",
-    tags: ["Python", "Node", "JavaScript"],
+      "Building the server-side web application logic or integration of the work front-end developers do. I write the web services and APIs used by front-end developers and mobile application developers",
+    tags: ["Python", "Node", "JavaScript", "Django"],
   },
   {
     id: 4,
     image: fullstackIcon,
     name: "Full Stack Development",
     description:
-      "Be it website or mobile app design, my clients get the product that has the best combination of outstanding user experience and visual aesthetics.",
-    tags: ["React", "JavaScript", "CSS"],
+      "I develop both client and server software managing all the work of programming a browser, server along with databases.",
+    tags: ["React", "Node", "SQL", "Django", "MongoDB"],
   },
   {
     id: 5,
     image: cmsIcon,
     name: "CMS Development",
     description:
-      "Be it website or mobile app design, my clients get the product that has the best combination of outstanding user experience and visual aesthetics.",
-    tags: ["Wordpress", "PHP", "Webflow"],
+      "Working with designers and content creators, I build tools that help others publish, edit, and maintain websites. These tools can be a website builder or a specially designed content management system.",
+    tags: ["Wordpress", "Webflow"],
   },
 ];
 

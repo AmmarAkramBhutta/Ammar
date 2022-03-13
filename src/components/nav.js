@@ -3,7 +3,6 @@ import Logo from "../img/logo.svg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
 import ContactButton from "./contact-button";
 
 const Nav = () => {
@@ -18,7 +17,7 @@ const Nav = () => {
     <NavStyle>
       <div className="section">
         <header className='{isSticky ? "sticky" : ""}'>
-          <Link to="/" className="logo" className="navlink">
+          <Link to="/" className="logo navlink">
             <img src={Logo} alt="Ammar Akram" />
           </Link>
           <ul>
@@ -131,16 +130,16 @@ const NavStyle = styled.div`
     }
   }
 
-  header ul li .navlink:hover {
-    /* border-bottom: 2px solid #9b51e0; */
-    opacity: 0.6;
+  /* header ul li .navlink:hover { */
+  /* border-bottom: 2px solid #9b51e0; */
+  /* opacity: 0.6;
     transition: opacity 0.3s;
   }
 
-  header ul li .navlink:active {
-    /* border-bottom: 2px solid #9b51e0; */
-    opacity: 1;
-  }
+  header ul li .navlink:active { */
+  /* border-bottom: 2px solid #9b51e0; */
+  /* opacity: 1;
+  } */
 `;
 
 const Line = styled(motion.span)`

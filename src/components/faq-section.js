@@ -1,21 +1,18 @@
 import { AnimateSharedLayout } from "framer-motion";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { scrollReveal } from "../animation";
 import { About } from "./about-section";
 import Toggle from "./toggle";
-import { useScroll } from "./useScroll";
 
 const FaqSection = () => {
-  const [element, controls] = useScroll();
+  // const [element, controls] = useScroll();
 
   return (
     <div className="section">
       <Faq
-        // variants={scrollReveal}
-        ref={element}
-        // animate={controls}
-        // initial="hidden"
+      // variants={scrollReveal}
+      // ref={element}
+      // animate={controls}
+      // initial="hidden"
       >
         <div className="faq">
           <h2>
@@ -29,9 +26,8 @@ const FaqSection = () => {
                 <div className="question">
                   <div className="answer">
                     <p>
-                      If you want any website related work,{" "}
-                      <Link to="/contact">send me an email</Link> and I'll
-                      respond as soon as possible.
+                      If you want any website related work, send me an email and
+                      I'll respond as soon as possible.
                     </p>
                   </div>
                 </div>

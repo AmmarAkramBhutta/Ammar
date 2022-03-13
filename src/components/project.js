@@ -1,9 +1,15 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Project = ({ name, tags, description, image, url }) => {
   return (
-    <ProjectStyle>
+    <ProjectStyle
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      layout
+    >
       <div className="section">
         <div className="main-div">
           <h4 className="project-text">Latest Work</h4>
@@ -26,9 +32,15 @@ const Project = ({ name, tags, description, image, url }) => {
                 </Link>
               </div>
             </div>
-            <div className="image">
-              <img src={image} alt={name} />
-            </div>
+            <div
+              className="image"
+              style={{
+                backgroundImage: "url(" + image + ")",
+                backgroundPosition: "top",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
           </div>
         </div>
       </div>
@@ -36,7 +48,7 @@ const Project = ({ name, tags, description, image, url }) => {
   );
 };
 
-const ProjectStyle = styled.div`
+const ProjectStyle = styled(motion.div)`
   .grid {
     display: grid;
     grid-template-areas:
@@ -71,6 +83,8 @@ const ProjectStyle = styled.div`
   }
   .image {
     grid-area: image;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100%;
 
     @media (max-width: 768px) {
       padding: 10px;
@@ -134,12 +148,13 @@ const ProjectStyle = styled.div`
     }
   }
 
-  img {
+  /* img {
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
     border: 0;
-  }
+    max-height: 500px;
+  } */
 `;
 
 export default Project;

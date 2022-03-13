@@ -71,6 +71,8 @@ const GlobalStyle = createGlobalStyle`
   text-transform: uppercase;
   letter-spacing: 2px;
   width: fit-content; 
+  user-select: none;
+  -moz-user-select: none;
 
   @media(max-width: 768px){
       margin: 0 auto;

@@ -23,29 +23,31 @@ const ProjectDetail = () => {
   return (
     <>
       {project && (
-        <Details
-          variants={pageAnimation}
-          initial="hidden"
-          animate="show"
-          exit="exit"
-        >
-          <div className="section">
-            <div className="container">
-              <div className="description">
-                <h4 className="project-text">Project showcase</h4>
-                <h2>{project.name}</h2>
-                <p>{project.description}</p>
-                <a href={project.link} target="_blank" alt="project link">
-                  visit live site →
-                </a>
+        <div>
+          <Details
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <div className="section">
+              <div className="container">
+                <div className="description">
+                  <h4 className="project-text">Project showcase</h4>
+                  <h2>{project.name}</h2>
+                  <p>{project.description}</p>
+                  <a href={project.link} target="_blank" alt="project link">
+                    visit this project →
+                  </a>
+                </div>
+                <img src={project.image} alt={project.name} className="image" />
               </div>
-              <img src={project.image} alt={project.name} className="image" />
             </div>
-          </div>
-        </Details>
+          </Details>
+          <SayHi />
+          <Footer />
+        </div>
       )}
-      <SayHi />
-      <Footer />
     </>
   );
 };
@@ -69,12 +71,13 @@ const Details = styled(motion.div)`
   .image {
     max-width: 800px;
     width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   a {
     display: inline-block;
     margin-top: 20px;
     font-size: 18px;
-    box-shadow: inset 0 -10px 0 0 rgb(155 81 224 / 60%);
+    box-shadow: inset 0 -11px 0 0 #fcc700;
     -webkit-transition: box-shadow 0.4s ease;
     transition: all 0.4s ease;
     font-weight: bold;
@@ -84,7 +87,7 @@ const Details = styled(motion.div)`
   }
 
   a:hover {
-    box-shadow: inset 0 -22px 0 0 rgb(9 96 239 / 41%);
+    box-shadow: inset 0 -21px 0 0 #fcc700;
   }
   a:active {
     opacity: 0.9;

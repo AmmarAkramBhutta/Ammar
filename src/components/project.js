@@ -87,6 +87,7 @@ const ProjectStyle = styled(motion.div)`
     height: 100%;
 
     @media (max-width: 768px) {
+      height: 300px;
       padding: 10px;
     }
   }
@@ -147,14 +148,6 @@ const ProjectStyle = styled(motion.div)`
       transform-style: preserve-3d;
     }
   }
-
-  /* img {
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    max-height: 500px;
-  } */
 `;
 
 export default Project;

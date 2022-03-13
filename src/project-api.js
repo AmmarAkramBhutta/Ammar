@@ -14,7 +14,7 @@ const projectApi = [
     url: "/projects/jdiary",
     name: "jDiary",
     link: "https://www.npmjs.com/package/jdiary",
-    tags: ["TypeScript", "React.js", "Node", "Web Assembly"],
+    tags: ["TypeScript", "React.js", "Node", "Webassembly"],
     description:
       "It is a complex app, an interactive browser-based coding environment built with the latest web technologies. It's like a Jupyter Notebook, but for Javascript, with many additional features added in.",
     image: jdiary,

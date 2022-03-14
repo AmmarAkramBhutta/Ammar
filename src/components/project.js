@@ -89,6 +89,7 @@ const ProjectStyle = styled(motion.div)`
     @media (max-width: 768px) {
       height: 300px;
       padding: 10px;
+      margin-bottom: 15px;
     }
   }
   .description {
@@ -151,6 +152,10 @@ const ProjectStyle = styled(motion.div)`
 
   .two {
     justify-content: start;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
 `;
 
